@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css"href="css/index.css">
+    <style type="text/css">
+
+    </style>
+</head>
+<body>
+<div id="root">
+<h1 align="center">欢迎使用图书推荐系统</h1>
+<div id="login-div">
+  <form action="/user/login" method="post">
+      <p>账号: <input type="text" name="username"></p>
+      <p>密码: <input type="password" name="password"></p>
+    <input type="submit" value="登录" id="login">
+<!--      <a href="page/logon.html" >注册</a>-->
+      <input type="button" value="注册" id="add">
+  </form>
+</div>
+</div>
+
+<script>
+    document.getElementById("login").onclick = function (){
+
+    }
+    document.getElementById("add").onclick = function (){
+        location.href = "page/logon.html";
+    }
+
+    const x = new Vue({
+        el:'#root',
+        url:'page/logon.html',
+        data:{
+
+        }
+    })
+</script>
+</body>
+</html>
